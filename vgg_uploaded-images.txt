@@ -19,7 +19,7 @@ Real:                   papillon   Classifier:                       papillon
 Real:                       ball   Classifier:                    soccer ball
 
                     Cat_01.jpg: 
-Real:                        cat   Classifier:                 tiger cat, cat
+Real:                        cat   Classifier:          tabby, tabby cat, cat
 
                Papillon_02.jpg: 
 Real:                   papillon   Classifier:                       papillon
@@ -87,7 +87,7 @@ Real:                       ball   Classifier:                    soccer ball
 PetLabelDog: 0  ClassLabelDog: 0
 
                     Cat_01.jpg: 
-Real:                        cat   Classifier:                 tiger cat, cat  
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
 PetLabelDog: 0  ClassLabelDog: 0
 
                Papillon_02.jpg: 
@@ -116,4 +116,4 @@ N Not-Dog Images    :   2
 % Correct Not-a Dog : 100.0
 % Match             : 100.0
 
-** Total Elapsed Runtime: 0:0:3
+** Total Elapsed Runtime: 0:0:5
