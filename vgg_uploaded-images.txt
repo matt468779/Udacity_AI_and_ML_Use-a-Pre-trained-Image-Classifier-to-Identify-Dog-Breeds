@@ -1,0 +1,119 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                Papillon_01.jpg  label:                   papillon
+ 2 key:                    Ball_01.jpg  label:                       ball
+ 3 key:                     Cat_01.jpg  label:                        cat
+ 4 key:                Papillon_02.jpg  label:                   papillon
+
+     MATCH:
+
+               Papillon_01.jpg: 
+Real:                   papillon   Classifier:                       papillon
+
+                   Ball_01.jpg: 
+Real:                       ball   Classifier:                    soccer ball
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat
+
+               Papillon_02.jpg: 
+Real:                   papillon   Classifier:                       papillon
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+Warning: Duplicate name found -> corgi
+Warning: Duplicate name found -> affenpinscher
+Warning: Duplicate name found -> afghan hound
+Warning: Duplicate name found -> airedale terrier
+Warning: Duplicate name found -> alaskan malamute
+Warning: Duplicate name found -> american staffordshire terrier
+Warning: Duplicate name found -> basset hound
+Warning: Duplicate name found -> bloodhound
+Warning: Duplicate name found -> borzoi
+Warning: Duplicate name found -> boston terrier
+Warning: Duplicate name found -> bouvier des flandres
+Warning: Duplicate name found -> cairn terrier
+Warning: Duplicate name found -> cardigan welsh corgi
+Warning: Duplicate name found -> chow chow
+Warning: Duplicate name found -> clumber spaniel
+Warning: Duplicate name found -> cocker spaniel
+Warning: Duplicate name found -> corgi
+Warning: Duplicate name found -> dalmatian
+Warning: Duplicate name found -> dandie dinmont terrier
+Warning: Duplicate name found -> deerhound
+Warning: Duplicate name found -> doberman pinscher
+Warning: Duplicate name found -> english cocker spaniel
+Warning: Duplicate name found -> english springer spaniel
+Warning: Duplicate name found -> german shepherd dog
+Warning: Duplicate name found -> ibizan hound
+Warning: Duplicate name found -> irish setter
+Warning: Duplicate name found -> lhasa apso
+Warning: Duplicate name found -> maltese
+Warning: Duplicate name found -> newfoundland
+Warning: Duplicate name found -> norwegian elkhound
+Warning: Duplicate name found -> old english sheepdog
+Warning: Duplicate name found -> otterhound
+Warning: Duplicate name found -> pekingese
+Warning: Duplicate name found -> pembroke welsh corgi
+Warning: Duplicate name found -> poodle
+Warning: Duplicate name found -> pug
+Warning: Duplicate name found -> saint bernard
+Warning: Duplicate name found -> saluki
+Warning: Duplicate name found -> samoyed
+Warning: Duplicate name found -> schnauzer
+Warning: Duplicate name found -> scottish terrier
+Warning: Duplicate name found -> sealyham terrier
+Warning: Duplicate name found -> shetland sheepdog
+Warning: Duplicate name found -> silky terrier
+Warning: Duplicate name found -> staffordshire bull terrier
+Warning: Duplicate name found -> tibetan terrier
+Warning: Duplicate name found -> vizsla
+Warning: Duplicate name found -> walker hound
+
+     MATCH:
+
+               Papillon_01.jpg: 
+Real:                   papillon   Classifier:                       papillon  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Ball_01.jpg: 
+Real:                       ball   Classifier:                    soccer ball  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Papillon_02.jpg: 
+Real:                   papillon   Classifier:                       papillon  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+% Correct Dogs      : 100.0
+% Correct Breed     : 100.0
+% Correct Not-a Dog : 100.0
+% Match             : 100.0
+
+** Total Elapsed Runtime: 0:0:3
