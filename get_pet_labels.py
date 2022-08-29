@@ -43,11 +43,12 @@ def get_pet_labels(image_dir):
     results_dic = {}
     filename_list = listdir(image_dir)
     for filename in filename_list:
-        name = filename.strip().lower().split('_')
-        modified_name = name[0]
-        for i in range(1, len(name)-1):
-            modified_name += " " + name[i]
-        results_dic[filename] = [modified_name]
+        if not filename.startswith('.'):
+            name = filename.strip().lower().split('_')
+            modified_name = name[0]
+            for i in range(1, len(name)-1):
+                modified_name += " " + name[i]
+            results_dic[filename] = [modified_name]
     # Replace None with the results_dic dictionary that you created with this
     # function
     return results_dic

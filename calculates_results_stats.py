@@ -85,6 +85,7 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_dogs_img'] = b
     results_stats_dic['n_notdogs_img'] = d
     results_stats_dic['n_correct_dogs'] = a
+    results_stats_dic['n_correct_notdogs'] = c
     results_stats_dic['n_correct_breed'] = e
     results_stats_dic['pct_correct_dogs'] = a/b * 100 if b > 0 else 0
     results_stats_dic['pct_correct_breed'] = e/b * 100 if b > 0 else 0

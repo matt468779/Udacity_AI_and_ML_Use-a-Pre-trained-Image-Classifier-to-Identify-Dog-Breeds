@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Matewos Mengistu
 # DATE CREATED: 22/08/2022
-# REVISED DATE: 22/08/2022
+# REVISED DATE: 29/08/2022
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
 #          should also allow the user to be able to print out cases of misclassified
@@ -66,23 +66,19 @@ def print_results(results_dic, results_stats_dic, model,
           "***")
     print("{:20}: {:3d}".format('N Images', results_stats_dic['n_images']))
     print("{:20}: {:3d}".format('N Dog Images', results_stats_dic['n_dogs_img']))
-    print("{:20}: {:3d}".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
+    print("{:20}: {:3d}\n".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
     
-    print("{:20}: {:5.1f}\n{:20}: {:5.1f}\n{:20}: {:5.1f}\n{:20}: {:5.1f}".format('% Correct Dogs', results_stats_dic['pct_correct_dogs'], '% Correct Breed', results_stats_dic['pct_correct_breed'], '% Correct Not-a Dog', results_stats_dic['pct_correct_notdogs'], '% Match', results_stats_dic['pct_correct_labels']))
+    print("{:20}: {:5.1f}\n{:20}: {:5.1f}\n{:20}: {:5.1f}\n{:20}: {:5.1f}\n".format('% Correct Dogs', results_stats_dic['pct_correct_dogs'], '% Correct Breed', results_stats_dic['pct_correct_breed'], '% Correct Not-a Dog', results_stats_dic['pct_correct_notdogs'], '% Match', results_stats_dic['pct_correct_labels']))
     
-    if print_incorrect_dogs and results_stats_dic['n_correct_dogs'] + results_stats_dic['n_notdogs_img'] != results_stats_dic['n_images']:
+    if print_incorrect_dogs and results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'] != results_stats_dic['n_images']:
         print("Incorrect classifications of dogs:")
-        for filename, res in results_dic.items():
+        for _, res in results_dic.items():
             if sum(res[3:]) == 1:
-                print("{:20}: {:40}".format(filename, res[1]))
-    
+                print("Real: {:20} Classifier: {:40}".format(res[0], res[1]))
+                
+    print()
     if print_incorrect_breed and results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']:
         print("Incorrect classifications of breed:")
-        for filename, res in results_dic.items():
+        for _, res in results_dic.items():
             if sum(res[3:]) == 2 and res[2] == 0:
-                print("{:20}: {:40}".format(filename, res[1]))
-
-    
-    
-
-    
+                print("Real: {:20} Classifier: {:40}".format(res[0], res[1]))

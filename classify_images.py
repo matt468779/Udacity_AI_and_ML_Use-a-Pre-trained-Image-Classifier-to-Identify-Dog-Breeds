@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Matewos Mengistu
 # DATE CREATED: 22/08/2022                           
-# REVISED DATE: 22/08/2022
+# REVISED DATE: 29/08/2022
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
 #          labels to the pet image labels. This function inputs:
@@ -66,8 +66,8 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    filenames = listdir(images_dir)
-    for file in filenames:
+
+    for file in results_dic:
         classification = classifier(images_dir + '/' + file, model).strip().lower()
         results_dic[file].append(classification)
         results_dic[file].append(results_dic[file][0] in classification)
